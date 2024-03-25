@@ -17,8 +17,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fz7-Ip-TTA">
-                                <rect key="frame" x="136.66666666666666" y="683" width="119.99999999999997" height="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="반갑습니다" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0r-Tq-l4f">
+                                <rect key="frame" x="135" y="299" width="123" height="27"/>
+                                <color key="backgroundColor" systemColor="systemMintColor"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fz7-Ip-TTA">
+                                <rect key="frame" x="138" y="691" width="119.99999999999997" height="35"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="EmF-71-ugX"/>
@@ -28,30 +35,26 @@
                                 <state key="normal" title="Button">
                                     <color key="titleColor" systemColor="systemBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gn6-l1-GeW"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="반갑습니다" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0r-Tq-l4f">
-                                <rect key="frame" x="135" y="299" width="123" height="27"/>
-                                <color key="backgroundColor" systemColor="systemMintColor"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="S0r-Tq-l4f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="135" id="BpW-aR-nPY"/>
                             <constraint firstItem="S0r-Tq-l4f" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="240" id="TpU-RM-82Y"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="S0r-Tq-l4f" secondAttribute="trailing" constant="135" id="Xc3-yQ-4mu"/>
                             <constraint firstItem="Fz7-Ip-TTA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cK7-P7-x97"/>
                             <constraint firstItem="S0r-Tq-l4f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dp8-y2-vNW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Fz7-Ip-TTA" secondAttribute="bottom" constant="100" id="gVW-fI-fDY"/>
-                            <constraint firstItem="S0r-Tq-l4f" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="240" id="gXN-tT-v65"/>
-                            <constraint firstItem="S0r-Tq-l4f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="135" id="lCh-Sy-Qq0"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="S0r-Tq-l4f" secondAttribute="trailing" constant="135" id="nnF-d2-a56"/>
                             <constraint firstItem="S0r-Tq-l4f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="135" id="qNI-nj-PRc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mainLabel" destination="S0r-Tq-l4f" id="3bh-8o-rGO"/>
+                        <outlet property="myButton" destination="Fz7-Ip-TTA" id="QLK-74-zm6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
